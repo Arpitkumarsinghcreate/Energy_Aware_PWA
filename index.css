@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-bg: #0f172a;
+  --color-dark-card: #1e293b;
+  --color-dark-border: #334155;
+  --color-dark-text: #f8fafc;
+  --color-dark-muted: #94a3b8;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-dark-bg text-dark-text min-h-screen font-sans;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-border rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-dark-muted;
+}
+
+.glass {
+  @apply bg-dark-card/80 backdrop-blur-md border border-dark-border;
+}
+
+.btn-primary {
+  @apply px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 bg-dark-border hover:bg-slate-700 text-white rounded-lg transition-colors font-medium;
+}
+
+.card {
+  @apply bg-dark-card border border-dark-border rounded-xl p-4 shadow-lg;
+}
